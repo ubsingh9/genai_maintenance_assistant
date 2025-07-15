@@ -43,23 +43,23 @@ Instead of scanning a 200+ page manual, users simply ask natural-language questi
 
 ## 🏗️ Project Structure
 
-genai-maintenance-assistant/
-├── data/ # CAT 777F PDF manual
-├── vectorstore/ # FAISS vector DB
+```
+genai-cat777f-assistant/
+├── data/                # PDF manual
+├── vectorstore/         # FAISS vector DB
 ├── src/
-│ └── query.py # RAG chain logic (get_qa_chain)
+│   └── query.py         # RAG chain logic (get_qa_chain)
 ├── ui/
-│ └── app.py # Streamlit chat interface
+│   └── app.py           # Streamlit chat interface
 ├── requirements.txt
 └── README.md
-
-
+```
 
 ---
 
 ## 🧪 Sample Questions to Try
 
-> 🔹 What are the daily maintenance tasks for the CAT 777F?  
+> 🔹 What are the daily maintenance tasks for the dump truck?  
 > 🔹 What is the recommended tire pressure for rear wheels?  
 > 🔹 What are the safety precautions before working under the dump body?  
 > 🔹 How do I reset the transmission system?
@@ -70,38 +70,46 @@ genai-maintenance-assistant/
 
 1. **Clone this repo:**
 ```bash
-git clone https://github.com/ubsingh9/genai_maintenance_assistant.git
-cd genai-cat777fmaintenance-assistant
+git clone https://github.com/your-username/genai-maintenance-assistant.git
+cd genai-cat777f-assistant
 ```
+
 2. **Install dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
+
 3. **Run the app:**
 ```bash
 streamlit run ui/app.py
 ```
+
 4. **Configure secrets:**
-On local, create a .env file or export:
+On local, create a `.env` file or export:
 ```bash
 export GROQ_API_KEY="your-api-key"
 ```
+
 ---
+
 ## 💡 Future Enhancements
- Upload & switch between multiple manuals (CAT, Komatsu, etc.)
 
- Add voice input support
+- [ ] Upload & switch between multiple manuals (CAT, Komatsu, etc.)
+- [ ] Add voice input support
+- [ ] Add PDF section preview with answers
+- [ ] Host on HuggingFace Spaces
 
- Add PDF section preview with answers
+---
 
- Host on HuggingFace Spaces
-
-### 🙋‍♂️ About the Author
+## 🙋‍♂️ About the Author
 Uday Singh
 Data Scientist | GenAI Developer | Domain: Mining, Retail, Supply Chain
-Connect: https://www.linkedin.com/in/udaysingh3/
+Connect: [LinkedIn](https://www.linkedin.com/in/udaysingh3/)
 
-Portfolio: Coming soon
+Portfolio: *Coming soon*
+
+---
 
 ## 📄 License
+
 MIT License
