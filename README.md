@@ -86,8 +86,8 @@ On local, create a .env file or export:
 ```bash
 export GROQ_API_KEY="your-api-key"
 ```
-
-💡 Future Enhancements
+---
+## 💡 Future Enhancements
  Upload & switch between multiple manuals (CAT, Komatsu, etc.)
 
  Add voice input support
@@ -96,11 +96,12 @@ export GROQ_API_KEY="your-api-key"
 
  Host on HuggingFace Spaces
 
-🙋‍♂️ About the Author
+### 🙋‍♂️ About the Author
 Uday Singh
 Data Scientist | GenAI Developer | Domain: Mining, Retail, Supply Chain
 Connect: https://www.linkedin.com/in/udaysingh3/
+
 Portfolio: Coming soon
 
-📄 License
+## 📄 License
 MIT License
