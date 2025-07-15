@@ -1,20 +1,129 @@
-# CAT 777F GenAI Maintenance Assistant
+# 🛠️ GenAI Maintenance Assistant
 
-A GenAI-powered assistant built using LangChain, FAISS, and OpenAI to help field technicians query maintenance manuals (e.g., CAT 777F).
+A GenAI-powered RAG chatbot designed to help technicians and engineers interact with the **Dump Truck Operation Manual**. This assistant answers maintenance, repair, safety, and specification-related questions using context-aware AI grounded in the original manual.
 
-## Features
-- Ingests large PDF manuals
-- Semantic search using embeddings
-- Retrieval-Augmented Generation (RAG) pipeline
-- Gradio UI (coming soon)
+![Streamlit App](https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png)
 
-## Project Structure
-- `src/` - Source code
-- `data/` - Manuals or documents
-- `vectorstore/` - FAISS saved embeddings
-- `.env` - API keys
+---
 
-## Setup
+## 🚀 Live Demo
+
+🔗 [Launch the Assistant on Streamlit](https://genaimaintenanceassistant.streamlit.app/)
+
+---
+
+## 🎯 Use Case
+
+This assistant is tailored for field technicians, shop floor workers, or engineers who want instant answers to:
+
+- Safety instructions  
+- Maintenance steps  
+- Torque values  
+- Hydraulic system procedures  
+- Troubleshooting guides  
+
+Instead of scanning a 200+ page manual, users simply ask natural-language questions.
+
+---
+
+## 🧠 Powered By
+
+| Component             | Tech Used |
+|----------------------|-----------|
+| 🧾 Document Loader    | LangChain `PyPDFLoader` |
+| 🔍 Chunking           | `RecursiveCharacterTextSplitter` |
+| 📐 Embeddings         | `HuggingFaceEmbeddings` (`all-MiniLM-L6-v2`) |
+| 🧠 LLM                | `ChatGroq` (via LLaMA or Mixtral) |
+| 🗃️ Vector Store       | `FAISS` |
+| 💬 UI                 | `Streamlit` |
+| ☁️ Deployment         | `Streamlit Cloud` |
+| 🔐 API Management     | Streamlit Secrets for `GROQ_API_KEY` |
+
+---
+
+## 🏗️ Project Structure
+
+genai-maintenance-assistant/
+├── data/ # CAT 777F PDF manual
+├── vectorstore/ # FAISS vector DB
+├── src/
+│ └── query.py # RAG chain logic (get_qa_chain)
+├── ui/
+│ └── app.py # Streamlit chat interface
+├── requirements.txt
+└── README.md
+
+
+
+---
+
+## 🧪 Sample Questions to Try
+
+> 🔹 What are the daily maintenance tasks for the CAT 777F?  
+> 🔹 What is the recommended tire pressure for rear wheels?  
+> 🔹 What are the safety precautions before working under the dump body?  
+> 🔹 How do I reset the transmission system?
+
+---
+
+## 📦 Setup Instructions (Local)
+
+1. **Clone this repo:**
 ```bash
+git clone https://github.com/ubsingh9/genai_maintenance_assistant.git
+cd genai-cat777fmaintenance-assistant
+
+Install dependencies:
+
+bash
+Copy
+Edit
 pip install -r requirements.txt
-python src/ingest.py
+Run the app:
+
+bash
+Copy
+Edit
+streamlit run ui/app.py
+Configure secrets:
+On local, create a .env file or export:
+
+bash
+Copy
+Edit
+export GROQ_API_KEY="your-api-key"
+💡 Future Enhancements
+ Upload & switch between multiple manuals (CAT, Komatsu, etc.)
+
+ Add voice input support
+
+ Add PDF section preview with answers
+
+ Host on HuggingFace Spaces
+
+🙋‍♂️ About the Author
+Uday Singh
+Data Scientist | GenAI Developer | Domain: Mining, Retail, Supply Chain
+Connect: LinkedIn
+Portfolio: Coming soon
+
+📄 License
+MIT License
+
+yaml
+Copy
+Edit
+
+---
+
+## ✅ What To Do Now
+
+1. Replace:
+   - 🔗 `https://your-streamlit-url.streamlit.app`
+   - GitHub username + LinkedIn URL
+2. Save as `README.md` in the root folder
+3. Push to GitHub:
+```bash
+git add README.md
+git commit -m "Added project README"
+git push
