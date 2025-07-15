@@ -23,3 +23,4 @@ def ingest_pdf(pdf_path:str, save_path:str="vectorstore" ):
 
 if __name__ == "__main__":
     ingest_pdf("data/Dump-Truck-Operation-Manual.pdf")
+    
