@@ -2,7 +2,7 @@
 import os
 from langchain.document_loaders import PyMuPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 from dotenv import load_dotenv
 
@@ -23,4 +23,3 @@ def ingest_pdf(pdf_path:str, save_path:str="vectorstore" ):
 
 if __name__ == "__main__":
     ingest_pdf("data/Dump-Truck-Operation-Manual.pdf")
-    
