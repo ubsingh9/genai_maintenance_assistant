@@ -7,3 +7,4 @@ python-dotenv
 gradio
 pymupdf
 sentence-transformers
+streamlit

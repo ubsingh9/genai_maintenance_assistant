@@ -16,7 +16,7 @@ def load_vectorstore(path = 'vectorstore'):
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     return FAISS.load_local(path, embeddings, allow_dangerous_deserialization=True)
 
-def main():
+def get_qa_chain():
     vectorstore=load_vectorstore()
     retriever= vectorstore.as_retriever(search_type='similarity', search_kwsearch_kwargs={"k": 3})
     prompt_templet =""" You are a helpful and knowledgeable maintenance assistant for mining dump trucks.
@@ -41,7 +41,8 @@ def main():
         chain_type_kwargs={"prompt":prompt}
     )
 
-    while True:
+    return qa_chain
+    """while True:
         query=input("\nAsk a question (type 'exit' to quit):")
         if query.lower=='exit':
             break
@@ -49,4 +50,4 @@ def main():
         print(f"\n Answer: {responce}\n")
 
 if __name__=="__main__":
-    main()
+    main()"""
