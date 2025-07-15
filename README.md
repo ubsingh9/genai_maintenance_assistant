@@ -72,26 +72,21 @@ genai-maintenance-assistant/
 ```bash
 git clone https://github.com/ubsingh9/genai_maintenance_assistant.git
 cd genai-cat777fmaintenance-assistant
-
-Install dependencies:
-
-bash
-Copy
-Edit
+```
+2. **Install dependencies:**
+```bash
 pip install -r requirements.txt
-Run the app:
-
-bash
-Copy
-Edit
+```
+3. **Run the app:**
+```bash
 streamlit run ui/app.py
-Configure secrets:
+```
+4. **Configure secrets:**
 On local, create a .env file or export:
-
-bash
-Copy
-Edit
+```bash
 export GROQ_API_KEY="your-api-key"
+```
+
 💡 Future Enhancements
  Upload & switch between multiple manuals (CAT, Komatsu, etc.)
 
@@ -104,26 +99,8 @@ export GROQ_API_KEY="your-api-key"
 🙋‍♂️ About the Author
 Uday Singh
 Data Scientist | GenAI Developer | Domain: Mining, Retail, Supply Chain
-Connect: LinkedIn
+Connect: https://www.linkedin.com/in/udaysingh3/
 Portfolio: Coming soon
 
 📄 License
 MIT License
-
-yaml
-Copy
-Edit
-
----
-
-## ✅ What To Do Now
-
-1. Replace:
-   - 🔗 `https://your-streamlit-url.streamlit.app`
-   - GitHub username + LinkedIn URL
-2. Save as `README.md` in the root folder
-3. Push to GitHub:
-```bash
-git add README.md
-git commit -m "Added project README"
-git push
