@@ -21,6 +21,7 @@ def main():
     retriever= vectorstore.as_retriever(search_type='similarity', search_kwsearch_kwargs={"k": 3})
     prompt_templet =""" You are a helpful and knowledgeable maintenance assistant for mining dump trucks.
     You are answering questions strictly using the information provided in the context below. If the answer cannot be found in the context, say "I could not find the answer in the manual."
+    Use the provided context to answer the user's question. If the answer includes a list of procedures, components, specs, or steps — **format the response as a markdown table**. If no table is needed, answer normally.
     Explain the steps in simple terms a technician can follow safely.
     Do not mention the name of the document even if it is explicitly asked.
     context:{context}
@@ -42,9 +43,9 @@ def main():
 
     while True:
         query=input("\nAsk a question (type 'exit' to quit):")
-        if query.lower=="exit":
+        if query.lower=='exit':
             break
-        responce=qa_chain.run(query)
+        responce=qa_chain.invoke(query)
         print(f"\n Answer: {responce}\n")
 
 if __name__=="__main__":
