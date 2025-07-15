@@ -44,7 +44,7 @@ Instead of scanning a 200+ page manual, users simply ask natural-language questi
 ## 🏗️ Project Structure
 
 ```
-genai-cat777f-assistant/
+genai-maintenance-assistant/
 ├── data/                # PDF manual
 ├── vectorstore/         # FAISS vector DB
 ├── src/
@@ -104,6 +104,7 @@ export GROQ_API_KEY="your-api-key"
 ## 🙋‍♂️ About the Author
 Uday Singh
 Data Scientist | GenAI Developer | Domain: Mining, Retail, Supply Chain
+
 Connect: [LinkedIn](https://www.linkedin.com/in/udaysingh3/)
 
 Portfolio: *Coming soon*
