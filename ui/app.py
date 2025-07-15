@@ -12,7 +12,7 @@ qa_chain = get_qa_chain()
 
 # Page config
 st.set_page_config(page_title="GenAI Assistant")
-st.title("Gen AI Mining Maintenance Assistant")
+st.title("Gen AI Maintenance Assistant")
 st.markdown("""
 Ask any question from the this dump truck manual. The Gen AI assistant will retrieve context and answer accurately
 """)
