@@ -71,7 +71,7 @@ genai-maintenance-assistant/
 1. **Clone this repo:**
 ```bash
 git clone https://github.com/your-username/genai-maintenance-assistant.git
-cd genai-cat777f-assistant
+cd genai-maintenance-assistant
 ```
 
 2. **Install dependencies:**
