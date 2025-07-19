@@ -15,7 +15,11 @@ os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
 
 def load_vectorstore(path = 'vectorstore'):
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    #embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    embeddings = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/all-MiniLM-L6-v2",
+        model_kwargs={"device": "cpu"}  # <-- Force CPU
+    )
     return FAISS.load_local(path, embeddings, allow_dangerous_deserialization=True)
 
 def get_qa_chain():
