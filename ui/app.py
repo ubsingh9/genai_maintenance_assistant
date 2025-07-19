@@ -11,7 +11,13 @@ from src.query import get_qa_chain
 qa_chain = get_qa_chain()
 
 # Page config
-st.set_page_config(page_title="GenAI Assistant")
+# ✅ Set page config BEFORE anything else
+st.set_page_config(
+    page_title="Retail SKU Demand Assistant",
+    page_icon="🛍️",
+    layout="wide"
+)
+
 st.title("Gen AI Maintenance Assistant")
 st.markdown("""
 Ask any question from the this dump truck manual. The Gen AI assistant will retrieve context and answer accurately
